@@ -1,4 +1,4 @@
-# Computer-Store-Management
+# Computer-Store-Information-Management
 
 ## Advance Programming with Python group project 15
 
