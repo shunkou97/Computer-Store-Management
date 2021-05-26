@@ -55,7 +55,7 @@ def ADDPRO():
         mycursor.execute("SELECT * FROM product WHERE name = %s GROUP BY name",(name,))
         result = mycursor.fetchone()
         if result:
-            messagebox.showinfo("Error","Product already exists")
+            messagebox.showinfo("Error", "Product already exists")
         else:
             connection = mysql.connector.connect(host="localhost", user="root", password="", database="mid_python")
             mycursor = connection.cursor()
@@ -212,7 +212,7 @@ def ADDCUS():
         mycursor.execute("SELECT * FROM product WHERE name = %s GROUP BY name",(bought,))
         result = mycursor.fetchone()
         if not result:
-            messagebox.showinfo("Error","Product doesn't exist")
+            messagebox.showinfo("Error", "Product doesn't exist")
         else:
             connection = mysql.connector.connect(host="localhost", user="root", password="", database="mid_python")
             mycursor = connection.cursor()
@@ -545,6 +545,7 @@ if __name__ == "__main__":
     root.title("Computer store management")
     root.geometry("1500x1000")
 
+
 # styke treeview
     style = ttk.Style()
     style.theme_use('clam')
@@ -569,10 +570,10 @@ if __name__ == "__main__":
     tree_scrollcus.pack(side=tk.RIGHT,fill=tk.Y)
 
 #edit product
-    tk.Label(root, text="Product name",fg="red").place(x=5, y=10)
-    tk.Label(root, text="Product price",fg="red").place(x=5, y=60)
-    tk.Label(root, text="Product amount",fg="red").place(x=5, y=110)
-    tk.Label(root, text="Product information",fg="red").place(x=5, y=160)
+    tk.Label(root, text="Product name").place(x=5, y=10)
+    tk.Label(root, text="Product price").place(x=5, y=60)
+    tk.Label(root, text="Product amount").place(x=5, y=110)
+    tk.Label(root, text="Product information").place(x=5, y=160)
 
 
     proname = tk.Entry(root)
@@ -611,10 +612,10 @@ if __name__ == "__main__":
     tree_framepro.place(x=10, y=315)
 
 #edit staff
-    tk.Label(root, text="Staff name",fg="red").place(x=430, y=10)
-    tk.Label(root, text="Staff birth",fg="red").place(x=430, y =60)
-    tk.Label(root, text="Staff contact",fg="red").place(x=430, y=110)
-    tk.Label(root, text="Staff job",fg="red").place(x=430, y=160)
+    tk.Label(root, text="Staff name").place(x=430, y=10)
+    tk.Label(root, text="Staff birth").place(x=430, y =60)
+    tk.Label(root, text="Staff contact").place(x=430, y=110)
+    tk.Label(root, text="Staff job").place(x=430, y=160)
 
 
     stname = tk.Entry(root)
@@ -653,11 +654,11 @@ if __name__ == "__main__":
 
 
 #edit customer
-    tk.Label(root, text="Customer name",fg="red").place(x=820, y=10)
-    tk.Label(root, text="Bought product",fg="red").place(x=820, y=47)
-    tk.Label(root, text="Amount",fg="red").place(x=820, y=84)
-    tk.Label(root, text="Customer Contact",fg="red").place(x=820, y=121)
-    tk.Label(root, text="Bought date",fg="red").place(x=820, y=160)
+    tk.Label(root, text="Customer name").place(x=820, y=10)
+    tk.Label(root, text="Bought product").place(x=820, y=47)
+    tk.Label(root, text="Amount").place(x=820, y=84)
+    tk.Label(root, text="Customer Contact").place(x=820, y=121)
+    tk.Label(root, text="Bought date").place(x=820, y=160)
 
     cusname = Entry(root)
     cusname.place(x=960, y=10)
@@ -704,11 +705,11 @@ if __name__ == "__main__":
     seacrch_customer_button = tk.Button(root, text="Search Customer", command=lambda:search_cus_table(),bg="spring green", height=2, width=15).place(x=965, y=240)
 
 #edit search name
-    search_box_label = tk.Label(root, text="Search name ", bg="gray64")
+    search_box_label = tk.Label(root, text="Search name ")
     search_box_label.place(x=30, y=290)
     search_box = tk.Entry(root)
     search_box.place(x=130, y=290, width=400)
-    search_button = tk.Button(root, text="Search name", command=lambda: search_name(), bg="hot pink",height=1, width=16)
+    search_button = tk.Button(root, text="Search name", command=lambda: search_name(), bg="LightCyan3",height=1, width=16)
     search_button.place(x=705, y=285)
 
 # dropmenuiproduct
@@ -717,13 +718,13 @@ if __name__ == "__main__":
     drop.place(x=550, y=290)
 
 # exit button
-    exitButton = tk.Button(root, text="Exit", command=root.destroy,fg="white",bg="red", height=10, width=15).place(x=1140, y=450)
+    exitButton = tk.Button(root, text="Exit", command=root.destroy,fg="white",bg="firebrick1", height=10, width=15).place(x=1140, y=450)
 
 # refresh button
-    refresh_Button = tk.Button(root, text='Refresh',command=lambda:[show_pro_infor(), show_cus_infor(), show_st_infor(),Clear()],bg="orange", height=17, width=15).place(x=1140,y=10)
+    refresh_Button = tk.Button(root, text='Refresh',command=lambda:[show_pro_infor(), show_cus_infor(), show_st_infor(),Clear()],bg="DeepSkyBlue2", height=17, width=15).place(x=1140,y=10)
 
 # return button
-    returnButton = tk.Button(root, text="Return to main", command=lambda: Return(), bg="purple", height=9,width=15).place(x=1140, y=290)
+    returnButton = tk.Button(root, text="Return to main", command=lambda: Return(), bg="hot pink", height=9,width=15).place(x=1140, y=290)
 
 # show and place value
     show_pro_infor()
