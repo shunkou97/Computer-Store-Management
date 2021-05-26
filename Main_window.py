@@ -37,11 +37,11 @@ if __name__== "__main__":
 
     textsize = font.Font(size=36)
 
-    Company_button = tk.Button(root,text = "For Staff",command=lambda:Company(), bg="purple", height=15, width=35).place(x=800, y=220)
+    Company_button = tk.Button(root,text = "For Staff",command=lambda:Company(), bg="ghost white", height=15, width=35).place(x=800, y=220)
 
-    Customer_button = tk.Button(root,text = "For Customer",command=lambda:Customer(), bg="hot pink", height=15, width=35).place(x=210, y=220)
+    Customer_button = tk.Button(root,text = "For Customer",command=lambda:Customer(), bg="sky blue", height=15, width=35).place(x=210, y=220)
 
-    exitButton = tk.Button(root, text="Exit", command=root.destroy, fg="white", bg="red", height=3, width=15).place(x=1140, y=580)
+    exitButton = tk.Button(root, text="Exit", command=root.destroy, fg="white", bg="firebrick1", height=3, width=15).place(x=1140, y=580)
 
 root.bind('<Configure>', resizer)
 
