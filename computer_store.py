@@ -149,17 +149,17 @@ if __name__== "__main__":
     returnButton = tk.Button(root, text="Return to main", command=lambda:Return(), bg = "hot pink", height = 3, width = 20).place(x=1100, y=40)
 
 # exit button
-    exitButton = tk.Button(root, text="Exit", command=root.destroy, fg="white", bg="red", height=3, width=15).place(x=1100, y=120)
+    exitButton = tk.Button(root, text="Exit", command=root.destroy, fg="white", bg="firebrick1", height=3, width=15).place(x=1100, y=120)
 
 # refresh button
-    refresh_Button = tk.Button(root, text='Refresh',command=lambda: [show_pro_infor(),Clear()], bg="magenta",height=3, width=15).place(x=900, y=40)
+    refresh_Button = tk.Button(root, text='Refresh',command=lambda: [show_pro_infor(),Clear()], bg="sky blue",height=3, width=15).place(x=900, y=40)
 
 # entry
     search_box = tk.Entry(root)
     search_box.place(x=170, y=58, width=300)
     search_box_label = tk.Label(root, text="Search product ", fg="black")
     search_box_label.place(x=60, y=58)
-    search_button = tk.Button(root, text="Search Product", command=lambda: search_pro_table(), bg="spring green",height=3, width=15)
+    search_button = tk.Button(root, text="Search Product", command=lambda: search_pro_table(), bg="PaleGreen2",height=3, width=15)
     search_button.place(x=700, y=40)
 
 # Search by bar
